@@ -6,6 +6,7 @@ use BitsCms\Bits\Bit;
 use BitsCms\Bits\Exceptions\BitNotFound;
 use BitsCms\Bits\Exceptions\TypeDoesntExist;
 use BitsCms\Bits\Facades\Bit as BitFacade;
+use InvalidArgumentException;
 
 class BitTest extends TestCase
 {
@@ -16,7 +17,7 @@ class BitTest extends TestCase
         $this->bit = Bit::create([
             'type' => 'text',
             'key' => 'hello_world',
-            'value' => ['text' => 'Hello world'],
+            'data' => ['text' => 'Hello world'],
         ]);
     }
 
@@ -46,6 +47,20 @@ class BitTest extends TestCase
         $this->assertEquals('Hello world', $reader->text);
     }
 
+    public function test_it_can_retrieve_miltiple_bits_by_keys_and_ids()
+    {
+        $readers = Bit::read(['hello_world', $this->bit->id]);
+
+        $this->assertEquals('Hello world', $readers[0]->text);
+        $this->assertEquals('Hello world', $readers[1]->text);
+    }
+
+    public function test_read_throws_when_an_invalid_argument_is_provided()
+    {
+        $this->expectException(InvalidArgumentException::class);
+        Bit::read((object) []);
+    }
+
     public function test_read_throws_when_a_bit_wasnt_found()
     {
         $this->expectException(BitNotFound::class);
@@ -57,7 +72,7 @@ class BitTest extends TestCase
         $bit = Bit::create([
             'type' => 'page',
             'key' => 'home',
-            'value' => [],
+            'data' => [],
         ]);
 
         $this->expectException(TypeDoesntExist::class);

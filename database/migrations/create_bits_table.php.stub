@@ -16,7 +16,7 @@ class CreateBitsTable extends Migration
         Schema::create('bits', function (Blueprint $table) {
             $table->increments('id');
             
-            $table->json('value');
+            $table->json('data');
             $table->string('type');
 
             $table->string('key')->nullable();

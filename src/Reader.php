@@ -6,6 +6,13 @@ use BitsCms\Bits\Exceptions\AttributeDoesntExist;
 
 abstract class Reader
 {
+    /**
+     * Default implementation for loading a Bit's data in a new Reader instance.
+     * 
+     * @param array $data
+     * 
+     * @return \BitsCms\Bits\Reader
+     */
     public static function load($data)
     {
         $reader = new static();
@@ -19,6 +26,16 @@ abstract class Reader
         return $reader;
     }
 
+    /**
+     * Retrieve a Reader property.
+     *
+     * - Retrieves protected and private fields for easy read-only attributes
+     * - Retrieves computed properties implemented like Eloquent accessors
+     *
+     * @return mixed
+     *
+     * @throws \BitsCms\Bits\AttributeDoesntExist
+     */
     public function __get($key)
     {
         $accessor = 'get'.ucfirst(camel_case($key)).'Attribute';
