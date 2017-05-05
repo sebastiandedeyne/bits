@@ -1,6 +1,6 @@
 <?php
 
-namespace BitsCms\Bits\Exceptions;
+namespace Bits\Bits\Exceptions;
 
 use Exception;
 

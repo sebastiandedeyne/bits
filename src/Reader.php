@@ -1,8 +1,8 @@
 <?php
 
-namespace BitsCms\Bits;
+namespace Bits\Bits;
 
-use BitsCms\Bits\Exceptions\AttributeDoesntExist;
+use Bits\Bits\Exceptions\AttributeDoesntExist;
 
 abstract class Reader
 {
@@ -11,7 +11,7 @@ abstract class Reader
      * 
      * @param array $data
      * 
-     * @return \BitsCms\Bits\Reader
+     * @return \Bits\Bits\Reader
      */
     public static function load($data)
     {
@@ -34,7 +34,7 @@ abstract class Reader
      *
      * @return mixed
      *
-     * @throws \BitsCms\Bits\AttributeDoesntExist
+     * @throws \Bits\Bits\AttributeDoesntExist
      */
     public function __get($key)
     {

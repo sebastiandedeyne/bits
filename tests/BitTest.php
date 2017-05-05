@@ -1,11 +1,11 @@
 <?php
 
-namespace BitsCms\Bits\Test;
+namespace Bits\Bits\Test;
 
-use BitsCms\Bits\Bit;
-use BitsCms\Bits\Exceptions\BitNotFound;
-use BitsCms\Bits\Exceptions\TypeDoesntExist;
-use BitsCms\Bits\Facades\Bit as BitFacade;
+use Bits\Bits\Bit;
+use Bits\Bits\Exceptions\BitNotFound;
+use Bits\Bits\Exceptions\TypeDoesntExist;
+use Bits\Bits\Facades\Bit as BitFacade;
 use InvalidArgumentException;
 
 class BitTest extends TestCase

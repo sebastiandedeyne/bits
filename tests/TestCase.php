@@ -1,8 +1,8 @@
 <?php
 
-namespace BitsCms\Bits\Test;
+namespace Bits\Bits\Test;
 
-use BitsCms\Bits\BitsServiceProvider;
+use Bits\Bits\BitsServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra

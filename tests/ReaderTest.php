@@ -1,9 +1,9 @@
 <?php
 
-namespace BitsCms\Bits\Test;
+namespace Bits\Bits\Test;
 
-use BitsCms\Bits\Exceptions\AttributeDoesntExist;
-use BitsCms\Bits\Reader;
+use Bits\Bits\Exceptions\AttributeDoesntExist;
+use Bits\Bits\Reader;
 use Error;
 use PHPUnit\Framework\TestCase;
 

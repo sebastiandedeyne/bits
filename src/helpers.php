@@ -1,6 +1,6 @@
 <?php
 
-use BitsCms\Bits\Bit;
+use Bits\Bits\Bit;
 
 function bit($key)
 {

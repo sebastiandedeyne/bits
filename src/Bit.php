@@ -1,9 +1,9 @@
 <?php
 
-namespace BitsCms\Bits;
+namespace Bits\Bits;
 
-use BitsCms\Bits\Exceptions\BitNotFound;
-use BitsCms\Bits\Exceptions\TypeDoesntExist;
+use Bits\Bits\Exceptions\BitNotFound;
+use Bits\Bits\Exceptions\TypeDoesntExist;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Config;
@@ -27,9 +27,9 @@ class Bit extends Model
      * 
      * @param string|int|array $key
      * 
-     * @return \BitsCms\Bits\Reader|\BitsCms\Bits\Reader[]
+     * @return \Bits\Bits\Reader|\Bits\Bits\Reader[]
      *
-     * @throws \BitsCms\Bits\BitNotFound
+     * @throws \Bits\Bits\BitNotFound
      * @throws \InvalidArgumentException
      */
     public static function read($key)
@@ -60,7 +60,7 @@ class Bit extends Model
      *
      * @param int $id
      * 
-     * @return \BitsCms\Bits\Bit|null
+     * @return \Bits\Bits\Bit|null
      */
     public static function findById($id)
     {
@@ -76,7 +76,7 @@ class Bit extends Model
      *
      * @param string $key
      * 
-     * @return \BitsCms\Bits\Bit|null
+     * @return \Bits\Bits\Bit|null
      */
     public static function findByKey($key)
     {
@@ -115,9 +115,9 @@ class Bit extends Model
      * Return the reader instance for the Bit. Readers are registered
      * int the `bits` configuration.
      *
-     * @return \BitsCms\Bits\Reader
+     * @return \Bits\Bits\Reader
      *
-     * @throws \BitsCms\Bits\Exceptions\TypeDoesntExist
+     * @throws \Bits\Bits\Exceptions\TypeDoesntExist
      */
     public function reader()
     {

@@ -1,8 +1,8 @@
 <?php
 
-namespace BitsCms\Bits\Test;
+namespace Bits\Bits\Test;
 
-use BitsCms\Bits\Reader;
+use Bits\Bits\Reader;
 
 class Text extends Reader {
     protected $text;

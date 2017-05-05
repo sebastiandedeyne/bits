@@ -1,8 +1,8 @@
 <?php
 
-namespace BitsCms\Bits;
+namespace Bits\Bits;
 
-use BitsCms\Bits\Bit;
+use Bits\Bits\Bit;
 use Illuminate\Support\ServiceProvider;
 
 class BitsServiceProvider extends ServiceProvider

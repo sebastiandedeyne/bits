@@ -2,7 +2,7 @@
 
 return [
     
-    'model' => BitsCms\Bits\Bit::class,
+    'model' => Bits\Bits\Bit::class,
     
     'types' => [],
 

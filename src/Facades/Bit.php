@@ -1,15 +1,15 @@
 <?php
 
-namespace BitsCms\Bits\Facades;
+namespace Bits\Bits\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \BitsCms\Bits\Bit
+ * @see \Bits\Bits\Bit
  *
- * @method static \BitsCms\Bits\Reader read($key)
- * @method static \BitsCms\Bits\Bit|null findByKey($key)
- * @method static \BitsCms\Bits\Bit|null findById($id)
+ * @method static \Bits\Bits\Reader read($key)
+ * @method static \Bits\Bits\Bit|null findByKey($key)
+ * @method static \Bits\Bits\Bit|null findById($id)
  */
 class Bit extends Facade
 {
