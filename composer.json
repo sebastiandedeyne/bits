@@ -1,0 +1,42 @@
+{
+    "name": "bits/bits",
+    "description": "...",
+    "keywords": [
+        "bits"
+    ],
+    "homepage": "https://github.com/sebastiandedeyne/bits",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sebastian De Deyne",
+            "email": "sebastiandedeyne@gmail.com",
+            "homepage": "https://sebastiandedeyne.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "illuminate/database": "^5.4",
+        "illuminate/support": "^5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "orchestra/testbench": "~3.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BitsCms\\Bits\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BitsCms\\Bits\\Test\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
