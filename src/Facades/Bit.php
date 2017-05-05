@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Facade;
 /**
  * @see \Bits\Bits\Bit
  *
- * @method static \Bits\Bits\Reader read($key)
+ * @method static \Bits\Bits\BitReader read($key)
  * @method static \Bits\Bits\Bit|null findByKey($key)
  * @method static \Bits\Bits\Bit|null findById($id)
  */

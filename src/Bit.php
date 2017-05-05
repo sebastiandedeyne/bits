@@ -18,7 +18,7 @@ class Bit extends Model
     ];
 
     /**
-     * Retrieves a Bit by it's key or id, and returns it's Reader instance.
+     * Retrieves a Bit by it's key or id, and returns it's BitReader instance.
      *
      * - If `$key` is a string, it retrieves by key
      * - If `$key` is an int, it retrieves by id
@@ -27,7 +27,7 @@ class Bit extends Model
      * 
      * @param string|int|array $key
      * 
-     * @return \Bits\Bits\Reader|\Bits\Bits\Reader[]
+     * @return \Bits\Bits\BitReader|\Bits\Bits\BitReader[]
      *
      * @throws \Bits\Bits\BitNotFound
      * @throws \InvalidArgumentException
@@ -112,10 +112,10 @@ class Bit extends Model
     }
 
     /**
-     * Return the reader instance for the Bit. Readers are registered
+     * Return the reader instance for the Bit. BitReaders are registered
      * int the `bits` configuration.
      *
-     * @return \Bits\Bits\Reader
+     * @return \Bits\Bits\BitReader
      *
      * @throws \Bits\Bits\Exceptions\TypeDoesntExist
      */

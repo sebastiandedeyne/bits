@@ -4,14 +4,14 @@ namespace Bits\Bits;
 
 use Bits\Bits\Exceptions\AttributeDoesntExist;
 
-abstract class Reader
+abstract class BitReader
 {
     /**
-     * Default implementation for loading a Bit's data in a new Reader instance.
+     * Default implementation for loading a Bit's data in a new BitReader instance.
      * 
      * @param array $data
      * 
-     * @return \Bits\Bits\Reader
+     * @return \Bits\Bits\BitReader
      */
     public static function load($data)
     {
@@ -27,7 +27,7 @@ abstract class Reader
     }
 
     /**
-     * Retrieve a Reader property.
+     * Retrieve a BitReader property.
      *
      * - Retrieves protected and private fields for easy read-only attributes
      * - Retrieves computed properties implemented like Eloquent accessors

@@ -3,11 +3,11 @@
 namespace Bits\Bits\Test;
 
 use Bits\Bits\Exceptions\AttributeDoesntExist;
-use Bits\Bits\Reader;
+use Bits\Bits\BitReader;
 use Error;
 use PHPUnit\Framework\TestCase;
 
-class ReaderTest extends TestCase
+class BitReaderTest extends TestCase
 {
     public function setUp()
     {
