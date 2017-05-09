@@ -2,11 +2,10 @@
 
 namespace Bits\Bits\Test;
 
-use Bits\Bits\Bit;
+use Bits\Bits\Bits;
 use Bits\Bits\Exceptions\BitNotFound;
 use Bits\Bits\Exceptions\TypeDoesntExist;
-use Bits\Bits\Facades\Bit as BitFacade;
-use InvalidArgumentException;
+use Bits\Bits\Laravel\Bit;
 
 class BitTest extends TestCase
 {
@@ -19,21 +18,13 @@ class BitTest extends TestCase
             'key' => 'hello_world',
             'data' => ['text' => 'Hello world'],
         ]);
+
+        $this->bits = $this->app->make(Bits::class);
     }
 
-    public function test_it_can_find_a_bit_by_key()
+    public function test_it_can_read_a_bit()
     {
-        $this->assertTrue(Bit::findByKey('hello_world')->is($this->bit));
-    }
-
-    public function test_it_can_find_a_bit_by_id()
-    {
-        $this->assertTrue(Bit::findById($this->bit->id)->is($this->bit));
-    }
-
-    public function test_it_can_return_a_reader_for_a_bit_by_key()
-    {
-        $reader = Bit::read('hello_world');
+        $reader = $this->bits->read('hello_world');
 
         $this->assertInstanceOf(Text::class, $reader);
         $this->assertEquals('Hello world', $reader->text);

@@ -2,9 +2,11 @@
 
 namespace Bits\Bits\Test;
 
-use Bits\Bits\BitReader;
+use Bits\Bits\BaseReader;
+use Bits\Bits\Reader;
 
-class Text extends BitReader {
+class Text extends BaseReader implements Reader
+{
     protected $text;
 
     protected function getFirstWordAttribute()

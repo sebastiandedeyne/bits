@@ -2,9 +2,11 @@
 
 return [
     
-    'model' => Bits\Bits\Bit::class,
+    'repository' => Bits\Bits\Laravel\EloquentRepository::class,
     
     'types' => [],
+
+    'table' => 'bits',
 
     'cache_driver' => null,
 

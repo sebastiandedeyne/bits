@@ -6,8 +6,8 @@ use Exception;
 
 class BitNotFound extends Exception
 {
-    public static function withQuery($query)
+    public static function withKey($key)
     {
-        return new self("No bit found for query `{$query}`");
+        return new self("No bit found with key `{$key}`");
     }
 }

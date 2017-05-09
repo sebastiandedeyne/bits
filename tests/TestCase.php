@@ -2,7 +2,7 @@
 
 namespace Bits\Bits\Test;
 
-use Bits\Bits\BitsServiceProvider;
+use Bits\Bits\Laravel\BitsServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
