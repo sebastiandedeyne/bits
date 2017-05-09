@@ -4,5 +4,5 @@ namespace Bits\Bits;
 
 interface Repository
 {
-    public function find(string $key): Bit;
+    public function find(string $key);
 }

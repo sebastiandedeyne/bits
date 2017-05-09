@@ -21,7 +21,7 @@ class CacheRepository implements Repository
         $this->cache = $cache;
     }
 
-    public function find(string $key): Bit
+    public function find(string $key)
     {
         return $this->cache->rememberForever("bits:key:{$key}", function () use ($key) {
             return $this->repository->find($key);

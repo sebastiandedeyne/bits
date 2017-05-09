@@ -8,7 +8,7 @@ use Bits\Bits\Repository;
 
 class EloquentRepository implements Repository
 {
-    public function find(string $key): Bit
+    public function find(string $key)
     {
         return Model::where('key', $key)->first();
     }

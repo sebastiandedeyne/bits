@@ -6,10 +6,8 @@ use Exception;
 
 class AttributeDoesntExist extends Exception
 {
-    public static function forCall($key, Reader $reader)
+    public static function forCall($key, $reader)
     {
-        return new self(
-            sprintf("Attribute %s doesn't exist on reader `%s`", $key, get_class($reader))
-        );
+        return new self("Attribute {$key} doesn't exist on reader `{$reader}`");
     }
 }

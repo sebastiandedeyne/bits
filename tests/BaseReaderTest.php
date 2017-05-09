@@ -7,7 +7,7 @@ use Bits\Bits\BitReader;
 use Error;
 use PHPUnit\Framework\TestCase;
 
-class BitReaderTest extends TestCase
+class BaseReaderTest extends TestCase
 {
     public function setUp()
     {

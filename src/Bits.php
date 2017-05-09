@@ -3,6 +3,7 @@
 namespace Bits\Bits;
 
 use Bits\Bits\Exceptions\BitNotFound;
+use Bits\Bits\Exceptions\TypeDoesntExist;
 
 class Bits
 {
@@ -31,8 +32,12 @@ class Bits
      * @throws \Bits\Bits\Exceptions\BitNotFound
      * @throws \Bits\Bits\Exceptions\TypeDoesntExist
      */
-    public function read(string $key): Reader
+    public function read($key)
     {
+        if (is_array($key)) {
+            return array_map([$this, 'read'], $key);
+        }
+
         $bit = $this->repository->find($key);
 
         if (! $bit) {
