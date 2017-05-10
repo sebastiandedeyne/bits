@@ -1,6 +1,6 @@
 # Bits
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/sebastiandedeyne/bits.svg?style=flat-square)](https://packagist.org/packages/sebastiandedeyne/bits)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/bits-cms/bits.svg?style=flat-square)](https://packagist.org/packages/bits-cms/bits)
 [![Build Status](https://img.shields.io/travis/sebastiandedeyne/bits/master.svg?style=flat-square)](https://travis-ci.org/sebastiandedeyne/bits)
 
 A little experiment for storing key/values in CMS contexts. Might never see the light of day.
