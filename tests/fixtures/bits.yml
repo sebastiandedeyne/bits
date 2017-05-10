@@ -1,0 +1,6 @@
+hello_world:
+  type: text
+  text: Hello world
+
+no_type:
+  foo: Bar
