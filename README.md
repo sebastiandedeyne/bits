@@ -3,12 +3,14 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sebastiandedeyne/bits.svg?style=flat-square)](https://packagist.org/packages/sebastiandedeyne/bits)
 [![Build Status](https://img.shields.io/travis/sebastiandedeyne/bits/master.svg?style=flat-square)](https://travis-ci.org/sebastiandedeyne/bits)
 
+A little experiment for storing key/values in CMS contexts. Might never see the light of day.
+
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require bits/bits:dev-master
+composer require bits-cms/bits:dev-master
 ```
 
 ## Changelog
